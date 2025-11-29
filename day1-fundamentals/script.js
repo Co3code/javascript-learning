@@ -1,11 +1,7 @@
-// ============================================
-// START HERE: WHAT ARE WE DOING?
-// ============================================
 
-// This is a COMMENT - it doesn't run, just explains
 // We're learning JavaScript fundamentals today
 
-console.log("🎯 Welcome to JavaScript Learning!");
+console.log(" Welcome to JavaScript Learning!");
 
 // ============================================
 // PART 1: VARIABLES - BOXES FOR STORING DATA
@@ -16,11 +12,11 @@ console.log("🎯 Welcome to JavaScript Learning!");
 // HOW: We use 'let' and 'const'
 
 // EXAMPLE 1: let = changeable box
-let studentName = "Maria";
+let studentName = "anthony";
 console.log("Student name:", studentName);
 
 // We can CHANGE what's in a 'let' box
-studentName = "Carlos";
+studentName = "Cyan";
 console.log("Updated name:", studentName);
 
 // EXAMPLE 2: const = permanent box (cannot change)
@@ -37,8 +33,8 @@ console.log("Class:", className);
 // JavaScript understands different TYPES of information:
 
 // TYPE 1: String (text)
-const greeting = "Hello World";
-const favoriteFood = "pizza";
+const greeting = "hello everyone";
+const favoriteFood = "adobo";
 
 // TYPE 2: Number (integers & decimals)
 const age = 25;
@@ -76,8 +72,8 @@ console.log("Math results:", {
 // PART 4: STRING OPERATIONS - WORKING WITH TEXT
 // ============================================
 
-const firstName = "John";
-const lastName = "Smith";
+const firstName = "anthony";
+const lastName = "countian";
 
 // OLD WAY: String concatenation
 const fullNameOld = firstName + " " + lastName;
@@ -95,14 +91,14 @@ console.log("String examples:", { fullNameOld, fullNameNew, welcomeMessage });
 // Let's create a REAL example using everything we learned
 
 // Student information
-const myName = "Alex";
-const myAge = 22;
-const myMajor = "Computer Science";
-const currentYear = 2024;
+const myName = "anthony";
+const myAge = 20;
+const myMajor = "information technology";
+const currentYear = 2025;
 
 // Calculations based on the data
 const birthYear = currentYear - myAge;
-const yearsUntilGraduation = 4; // Assuming 4-year program
+const yearsUntilGraduation = 4; // 4-year program
 const graduationYear = currentYear + yearsUntilGraduation;
 
 // ============================================
