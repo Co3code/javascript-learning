@@ -64,13 +64,32 @@ const studentAge = 18;
 
 if (studentAge >= 18) {
   console.log("student is an adult");
+} else {
+  console.log("student is minor");
 }
 
 //if-else statement
-const temperature = 25;
-
+const temperature = 25; // this is a variable in javascipt  const meaning constant meaning  connot be change
+// let price = 26; // this value can change
+// price = 21;
 if (temperature > 30) {
   console.log("its so hot outside");
 } else {
   console.log("its comfortable weather");
 }
+
+// if - else (multiple conditional)
+
+const testScore = 85;
+
+if (testScore >= 90) {
+  console.log("Grade: A ");
+} else if (testScore >= 80) {
+  console.log("Grade: B");
+} else if (testScore >= 70) {
+  console.log("Grade : C");
+} else {
+  console.log("grade: F");
+}
+
+
