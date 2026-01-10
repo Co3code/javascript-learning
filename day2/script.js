@@ -51,3 +51,26 @@ function calculateGrade(score, maxScore) {
 console.log("25°C =", celsiusToFahrenheit(25), "°F");
 console.log("score  18/20", calculateGrade(18, 20), "%");
 
+//conditional logic making decision
+
+console.log("=== comparison==");
+console.log("10 > 5: ", 10 > 5);
+console.log("10 < 5: ", 10 < 5);
+console.log("10 === 10:", 10 === 10);
+console.log("10 !== 5:", 10 !== 5);
+
+//if/else statement
+const studentAge = 18;
+
+if (studentAge >= 18) {
+  console.log("student is an adult");
+}
+
+//if-else statement
+const temperature = 25;
+
+if (temperature > 30) {
+  console.log("its so hot outside");
+} else {
+  console.log("its comfortable weather");
+}
