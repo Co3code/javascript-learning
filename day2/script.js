@@ -99,7 +99,6 @@ function getGrade(score) {
   else if (score >= 60) return "D";
   else return "F";
 }
-console.log(getGrade(25));
 
 function canVote(age) {
   if (age >= 18) {
@@ -120,8 +119,35 @@ function getWeatherAdvice(temperature, isRaining) {
   } else {
     return "Nice weather! enjoy your day";
   }
-} 
-console.log(getWeatherAdvice(30, false));
-console.log(getWeatherAdvice(5, true));
-console.log(getWeatherAdvice(20, true));
-console.log(getWeatherAdvice(20, false));
+}
+//PRACTICAL PROJECT- STUDENT GRADER
+
+function calculateStudentGrade(studentname, mathsScore, scienceScore, englishScore) {
+  const average = (mathsScore + scienceScore + englishScore) / 3;
+
+  // Determine the grade based on the average score
+  let grade;
+  if (average >= 90) grade = "A";
+  else if (average >= 80) grade = "B";
+  else if (average >= 70) grade = "C";
+  else if (average >= 60) grade = "D";
+  else grade = "F";
+
+  // Determine if the student passes or fails based on the average
+  let status;
+  if (average >= 70) {
+    status = "PASS";
+  } else {
+    status = "FAIL";
+  }
+
+  // Return an object with student details
+  return {
+    name: studentname,
+    average: average.toFixed(1), // One decimal place
+    grade: grade,
+    status: status,
+  };
+}
+//DISPLAYING RESULT IN BROWSER
+const outputElement = document.getElementById(`outputs`);
