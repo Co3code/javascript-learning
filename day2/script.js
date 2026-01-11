@@ -92,4 +92,36 @@ if (testScore >= 90) {
   console.log("grade: F");
 }
 
+function getGrade(score) {
+  if (score >= 90) return "A";
+  else if (score >= 80) return "B";
+  else if (score >= 70) return "C";
+  else if (score >= 60) return "D";
+  else return "F";
+}
+console.log(getGrade(25));
 
+function canVote(age) {
+  if (age >= 18) {
+    return " Yes, you can vote!";
+  } else {
+    const yearLeft = 18 - age;
+    return `No, wait ${yearLeft} more year(S)`;
+  }
+}
+
+function getWeatherAdvice(temperature, isRaining) {
+  if (temperature > 30 && !isRaining) {
+    return "It's hot! Wear light clothes and suncreen ";
+  } else if (temperature < 10) {
+    return "It's cold! Wear a jacket";
+  } else if (isRaining) {
+    return " It's raining Bring an umbrella";
+  } else {
+    return "Nice weather! enjoy your day";
+  }
+} 
+console.log(getWeatherAdvice(30, false));
+console.log(getWeatherAdvice(5, true));
+console.log(getWeatherAdvice(20, true));
+console.log(getWeatherAdvice(20, false));
