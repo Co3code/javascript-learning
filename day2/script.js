@@ -1,96 +1,152 @@
-console.log("day 2: function & logic - lets begin!");
+// ============================================
+// DAY 2: FUNCTIONS & CONDITIONAL LOGIC
+// ============================================
 
+console.log(" Day 2: Functions & Logic - Let's begin!");
+
+// ============================================
+// PART 1: FUNCTIONS - REUSABLE CODE BLOCKS
+// ============================================
+
+// WHAT: Functions are like mini-programs that do specific tasks
+// WHY: Avoid repeating code, organize logic, make code readable
+// HOW: We define functions and then "call" them when needed
+
+// TYPE 1: Basic Function
+
+// FUNCTION DECLARATION (defining the function)
 function greetStudent() {
-  console.log("welcome to my javascript class");
-  console.log("we're learning function today");
+  console.log("Hello, welcome to JavaScript class!");
+  console.log("We're learning functions today!");
 }
-console.log("=== basic function ===");
-greetStudent();
-greetStudent(); // we can call multiple times
 
+// FUNCTION CALL (using the function)
+console.log("=== Basic Function ===");
+greetStudent(); // This runs all the code inside greetStudent
+greetStudent(); // We can call it multiple times!
+
+// ====================
+// TYPE 2: Function with Parameters
+// ====================
+
+// Parameters are inputs the function receives
 function greetByName(studentName) {
-  console.log(`hello ${studentName}, welcone to class`);
+  console.log(`Hello ${studentName}, welcome to class!`);
 }
 
-console.log("===function with parameters === ");
-greetByName("anthony");
-greetByName("cyan");
-greetByName("co3code");
+console.log("=== Function with Parameters ===");
+greetByName("Maria");
+greetByName("Carlos");
+greetByName("Anna");
 
-//function with multiple parameters
-
-function introduceStuden(name, age, subject) {
-  console.log(`Meet ${name}, whoe is ${age} years old and studies ${subject}`);
+// Function with multiple parameters
+function introduceStudent(name, age, subject) {
+  console.log(`Meet ${name}, who is ${age} years old and studies ${subject}`);
 }
-introduceStuden("anthony", 20, "computer scicece");
-introduceStuden("cyan", 22, "Mathematics");
 
+introduceStudent("John", 22, "Computer Science");
+introduceStudent("Sarah", 20, "Mathematics");
+
+// ====================
+// TYPE 3: Function with Return Values
+// ====================
+
+// Functions can GIVE BACK results using 'return'
 function calculateArea(length, width) {
   const area = length * width;
-  return area; // send result back
+  return area; // Sends the result back
 }
 
+// Using the returned value
 const roomArea = calculateArea(10, 5);
-console.log(`Room are: ${roomArea} square meters`);
+console.log(`Room area: ${roomArea} square meters`);
 
-console.log(`small area :${calculateArea(3, 3)} square meters`);
+// We can use returned values directly
+console.log(`Small area: ${calculateArea(3, 3)} square meters`);
 
-//practical example
+// ====================
+// TYPE 4: Practical Examples
+// ====================
 
-// tempartor converter
+// Temperature converter
 function celsiusToFahrenheit(celsius) {
   const fahrenheit = (celsius * 9) / 5 + 32;
   return fahrenheit;
 }
 
+// Grade calculator
 function calculateGrade(score, maxScore) {
   const percentage = (score / maxScore) * 100;
   return percentage;
 }
 
+// Using our practical functions
 console.log("25°C =", celsiusToFahrenheit(25), "°F");
-console.log("score  18/20", calculateGrade(18, 20), "%");
+console.log("Score 18/20 =", calculateGrade(18, 20), "%");
 
-//conditional logic making decision
+// ============================================
+// PART 2: CONDITIONAL LOGIC - MAKING DECISIONS
+// ============================================
 
-console.log("=== comparison==");
-console.log("10 > 5: ", 10 > 5);
-console.log("10 < 5: ", 10 < 5);
-console.log("10 === 10:", 10 === 10);
-console.log("10 !== 5:", 10 !== 5);
+// WHAT: Code that runs only under certain conditions
+// WHY: Programs need to make decisions based on data
+// HOW: Using if, else if, else statements
 
-//if/else statement
+// ====================
+// COMPARISON OPERATORS
+// ====================
+
+// >   greater than
+// <   less than
+// >=  greater than or equal to
+// <=  less than or equal to
+// === equal to (strict)
+// !== not equal to
+
+console.log("=== Comparison Examples ===");
+console.log("10 > 5:", 10 > 5); // true
+console.log("10 < 5:", 10 < 5); // false
+console.log("10 === 10:", 10 === 10); // true
+console.log("10 !== 5:", 10 !== 5); // true
+
+// ====================
+// IF/ELSE STATEMENTS
+// ====================
+
+// Basic if statement
 const studentAge = 18;
 
 if (studentAge >= 18) {
-  console.log("student is an adult");
-} else {
-  console.log("student is minor");
+  console.log("Student is an adult ");
 }
 
-//if-else statement
-const temperature = 25; // this is a variable in javascipt  const meaning constant meaning  connot be change
-// let price = 26; // this value can change
-// price = 21;
+// if-else statement
+const temperature = 25;
+
 if (temperature > 30) {
-  console.log("its so hot outside");
+  console.log("It's hot outside! ");
 } else {
-  console.log("its comfortable weather");
+  console.log("It's comfortable weather ");
 }
 
-// if - else (multiple conditional)
-
+// if-else if-else (multiple conditions)
 const testScore = 85;
 
 if (testScore >= 90) {
   console.log("Grade: A ");
 } else if (testScore >= 80) {
-  console.log("Grade: B");
+  console.log("Grade: B "); // This will run
 } else if (testScore >= 70) {
-  console.log("Grade : C");
+  console.log("Grade: C ");
 } else {
-  console.log("grade: F");
+  console.log("Grade: F ");
 }
+
+// ============================================
+// PART 3: COMBINING FUNCTIONS & CONDITIONALS
+// ============================================
+
+// This is where it gets powerful!
 
 function getGrade(score) {
   if (score >= 90) return "A";
@@ -102,30 +158,34 @@ function getGrade(score) {
 
 function canVote(age) {
   if (age >= 18) {
-    return " Yes, you can vote!";
+    return "Yes, you can vote! ";
   } else {
-    const yearLeft = 18 - age;
-    return `No, wait ${yearLeft} more year(S)`;
+    const yearsLeft = 18 - age;
+    return `No, wait ${yearsLeft} more year(s) `;
   }
 }
 
 function getWeatherAdvice(temperature, isRaining) {
   if (temperature > 30 && !isRaining) {
-    return "It's hot! Wear light clothes and suncreen ";
+    return "It's hot! Wear light clothes and sunscreen ";
   } else if (temperature < 10) {
-    return "It's cold! Wear a jacket";
+    return "It's cold! Wear a jacket ";
   } else if (isRaining) {
-    return " It's raining Bring an umbrella";
+    return "It's raining! Bring an umbrella ";
   } else {
-    return "Nice weather! enjoy your day";
+    return "Nice weather! Enjoy your day ";
   }
 }
-//PRACTICAL PROJECT- STUDENT GRADER
 
-function calculateStudentGrade(studentname, mathsScore, scienceScore, englishScore) {
-  const average = (mathsScore + scienceScore + englishScore) / 3;
+// ============================================
+// PART 4: PRACTICAL PROJECT - STUDENT GRADER
+// ============================================
 
-  // Determine the grade based on the average score
+function calculateStudentGrade(studentName, mathScore, scienceScore, englishScore) {
+  // Calculate average
+  const average = (mathScore + scienceScore + englishScore) / 3;
+
+  // Determine grade letter
   let grade;
   if (average >= 90) grade = "A";
   else if (average >= 80) grade = "B";
@@ -133,21 +193,52 @@ function calculateStudentGrade(studentname, mathsScore, scienceScore, englishSco
   else if (average >= 60) grade = "D";
   else grade = "F";
 
-  // Determine if the student passes or fails based on the average
+  // Determine status
   let status;
   if (average >= 70) {
-    status = "PASS";
+    status = "PASS ✅";
   } else {
-    status = "FAIL";
+    status = "FAIL ❌";
   }
 
-  // Return an object with student details
+  // Return student report
   return {
-    name: studentname,
-    average: average.toFixed(1), // One decimal place
+    name: studentName,
+    average: average.toFixed(1),
     grade: grade,
     status: status,
   };
 }
-//DISPLAYING RESULT IN BROWSER
-const outputElement = document.getElementById(`outputs`);
+
+const outputElement = document.getElementById("output");
+
+// Test our functions
+const student1 = calculateStudentGrade("Maria Garcia", 85, 92, 78);
+const student2 = calculateStudentGrade("John Smith", 45, 60, 55);
+const student3 = calculateStudentGrade("Anna Johnson", 95, 88, 92);
+
+// Test other functions
+const votingEligibility = canVote(17);
+const weatherAdvice = getWeatherAdvice(25, false);
+
+const displayContent = `
+  <h2>  Student Grading System </h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0;">
+        <div style="background: #e8f5e8; padding: 15px; border-radius: 8px;">
+            <h3>${student1.name}</h3>
+            <p><strong>Average:</strong> ${student1.average}%</p>
+            <p><strong>Grade:</strong> ${student1.grade}</p>
+            <p><strong>Status:</strong> ${student1.status}</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+`;
+outputElement.innerHTML = displayContent;
