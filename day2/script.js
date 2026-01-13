@@ -35,17 +35,17 @@ function greetByName(studentName) {
 }
 
 console.log("=== Function with Parameters ===");
-greetByName("Maria");
-greetByName("Carlos");
-greetByName("Anna");
+greetByName("Anthony");
+greetByName("Cyan");
+greetByName("Lian");
 
 // Function with multiple parameters
 function introduceStudent(name, age, subject) {
   console.log(`Meet ${name}, who is ${age} years old and studies ${subject}`);
 }
 
-introduceStudent("John", 22, "Computer Science");
-introduceStudent("Sarah", 20, "Mathematics");
+introduceStudent("Anthony", 22, "Computer Science");
+introduceStudent("Lian", 20, "Mathematics");
 
 // ====================
 // TYPE 3: Function with Return Values
@@ -213,9 +213,9 @@ function calculateStudentGrade(studentName, mathScore, scienceScore, englishScor
 const outputElement = document.getElementById("output");
 
 // Test our functions
-const student1 = calculateStudentGrade("Maria Garcia", 85, 92, 78);
-const student2 = calculateStudentGrade("John Smith", 45, 60, 55);
-const student3 = calculateStudentGrade("Anna Johnson", 95, 88, 92);
+const student1 = calculateStudentGrade("Anthony", 85, 92, 78);
+const student2 = calculateStudentGrade("Cyan " , 45, 60, 55);
+const student3 = calculateStudentGrade("Lian", 95, 88, 92);
 
 // Test other functions
 const votingEligibility = canVote(17);
@@ -231,6 +231,27 @@ const displayContent = `
             <p><strong>Status:</strong> ${student1.status}</p>
         </div>
 
+        <div style="background: #fff3cd; padding: 15px; border-radius: 8px;">
+            <h3>${student2.name}</h3>
+            <p><strong>Average:</strong> ${student1.average}%</p>
+            <p><strong>Grade:</strong> ${student1.grade}</p>
+            <p><strong>Status:</strong> ${student1.status}</p>
+        </div>
+
+        <div style="background: #e8f5e8; padding: 15px; border-radius: 8px;">
+            <h3>${student3.name}</h3>
+            <p><strong>Average:</strong> ${student1.average}%</p>
+            <p><strong>Grade:</strong> ${student1.grade}</p>
+            <p><strong>Status:</strong> ${student1.status}</p>
+        </div>
+  </div>
+  <h3> function Demonstrations </h3>
+
+  
+    <div style="background-color: #f0f0f0; padding: 15px; border-radius: 8px; margin: 15px 0;"></div>
+    <h4>Voting Eligibility Check (age 17):</h4>
+    <p>${votingEligibility}</p>
+  
 
 
 
