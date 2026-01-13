@@ -214,7 +214,7 @@ const outputElement = document.getElementById("output");
 
 // Test our functions
 const student1 = calculateStudentGrade("Anthony", 85, 92, 78);
-const student2 = calculateStudentGrade("Cyan " , 45, 60, 55);
+const student2 = calculateStudentGrade("Cyan ", 45, 60, 55);
 const student3 = calculateStudentGrade("Lian", 95, 88, 92);
 
 // Test other functions
@@ -275,5 +275,12 @@ const displayContent = `
     </div>
 `;
 
+outputElement.innerHTML = displayContent;
 
-outputElement.innerHTML = displayContent; 
+console.log("learning check");
+console.log("1. function help us avoid code repetition");
+console.log("2. Parameters are function inputs, return values outputs");
+console.log("3. if/else statements let our code make decision");
+console.log("4. we can combine function and conditionals for powerful logic");
+console.log(" ");
+console.log("Day 2 completed ");
