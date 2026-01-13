@@ -250,16 +250,30 @@ const displayContent = `
   
     <div style="background-color: #f0f0f0; padding: 15px; border-radius: 8px; margin: 15px 0;"></div>
     <h4>Voting Eligibility Check (age 17):</h4>
-    <p>${votingEligibility}</p>
+        <p>${votingEligibility}</p>
   
 
-
-
-
-
-
-
-
-
+    <h4>Weather Advice (25°C, No Rain):</h4>
+        <p>${weatherAdvice}</p>
+        
+        <h4>Temperature Conversion:</h4>
+        <p>25°C = ${celsiusToFahrenheit(25)}°F</p>
+    
+        </div>
+      <div style="background: #d4edda; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        <h4>💡 Today's Key Learnings:</h4>
+        <ul>
+            <li><strong>Functions:</strong> Reusable code blocks that can take inputs (parameters) and return outputs</li>
+            <li><strong>Conditional Logic:</strong> Using if/else to make decisions in code</li>
+            <li><strong>Comparison Operators:</strong> How to compare values (>, <, ===, etc.)</li>
+            <li><strong>Return Statements:</strong> How functions give back results</li>
+        </ul>
+        
+        <h4>🎯 Practice Exercise:</h4>
+        <p>Try creating a function that calculates BMI (Body Mass Index) using: <code>BMI = weight / (height * height)</code></p>
+        <p>Then add conditional logic to categorize: Underweight, Normal, Overweight, Obese</p>
+    </div>
 `;
-outputElement.innerHTML = displayContent;
+
+
+outputElement.innerHTML = displayContent; 
