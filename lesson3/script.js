@@ -55,8 +55,17 @@ console.log("after modification", shoppingList);
 
 console.log("=== FOR LOOP ===");
 
-
 //classic loop when you know how many times to repeat
 for (let i = 0; i < 5; i++) {
   console.log(`count: ${i}`);
 }
+
+
+// loop through array with for loop
+console.log("== looping through fruits==");
+for (let i = 0; i < fruits.length; i++) {
+  console.log(`{i + 1}.${fruits[i]}`);
+}
+
+
+
