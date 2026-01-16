@@ -22,9 +22,41 @@ console.log("Second fruit", fruits[1]);
 console.log("Third fruit", fruits[2]);
 console.log("Last fruit", fruits[3]);
 
-//get arrat length
-
+//get array length
 console.log("number of fruites", fruits.length);
 
 //Access last element dynamically
-console.log("Last fruit:", fruits[fruits.length - 1]); 
+console.log("Last fruit:", fruits[fruits.length - 1]);
+
+//array declared with 'let' can be modified
+let shoppingList = ["milk", "bread", "eggs"];
+
+//add  to end
+shoppingList.push("butter");
+console.log("after push", shoppingList); // adding butter to the end
+
+//remove from end
+shoppingList.pop();
+console.log("after pop:", shoppingList); // removing butter to the end
+
+//add to beginning
+shoppingList.unshift("coffee");
+console.log("after unshift", shoppingList); // adding fro biginning
+
+shoppingList.shift();
+console.log("after shift", shoppingList); //removing again
+
+//modify specific element
+
+shoppingList[1] = "whole wheat bread";
+console.log("after modification", shoppingList);
+
+// LOOPS REPEATING ACTIONS
+
+console.log("=== FOR LOOP ===");
+
+
+//classic loop when you know how many times to repeat
+for (let i = 0; i < 5; i++) {
+  console.log(`count: ${i}`);
+}
