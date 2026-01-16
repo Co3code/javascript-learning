@@ -64,8 +64,5 @@ for (let i = 0; i < 5; i++) {
 // loop through array with for loop
 console.log("== looping through fruits==");
 for (let i = 0; i < fruits.length; i++) {
-  console.log(`{i + 1}.${fruits[i]}`);
+  console.log(`${i + 1}. ${fruits[i]}`);
 }
-
-
-
