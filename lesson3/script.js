@@ -93,3 +93,13 @@ do {
 } while (attempts < 3);
 
 const number = [1, 2, 3, 4, 5];
+
+// forEach() - Execute function for each item
+
+console.log(" == forEach() == ");
+number.forEach(function (number) {
+  console.log(`number: ${number}`);
+});
+
+//Arrow function version
+number.forEach((number) => console.log(`num:${number}`));
