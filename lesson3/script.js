@@ -60,9 +60,36 @@ for (let i = 0; i < 5; i++) {
   console.log(`count: ${i}`);
 }
 
-
 // loop through array with for loop
 console.log("== looping through fruits==");
 for (let i = 0; i < fruits.length; i++) {
   console.log(`${i + 1}. ${fruits[i]}`);
 }
+
+//Modern way to lopp through arrays
+console.log("== for..of loop ==");
+for (const fruit of fruits) {
+  console.log(`i like ${fruit}`);
+}
+
+// WHILE LOOP
+
+//when you don't know how many time to repeat
+console.log("=== While Loop ===");
+
+let counter = 0;
+while (counter < 3) {
+  console.log(`While counter: ${counter}`);
+  counter++; // Don't forget this or infinite loop!
+}
+
+// DO ... WHILE LOOP
+
+//Run at least once, then checks condition
+console.log("== Do...while loop == ");
+let attempts = 0;
+do {
+  console.log(`attempt #${attempts + 1}`);
+} while (attempts < 3);
+
+const number = [1, 2, 3, 4, 5];
