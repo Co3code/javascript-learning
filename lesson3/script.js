@@ -103,3 +103,11 @@ number.forEach(function (number) {
 
 //Arrow function version
 number.forEach((number) => console.log(`num:${number}`));
+
+//map() - Transform eacg item
+console.log(" == map()==");
+const doubled = number.map((num) => num * 2);
+console.log("Double:", doubled); // [ 2, 4, 6, 8, 10]
+
+const studentNames = students.map((student) => `${student}`(student));
+console.log("Student names:", studentNames);
